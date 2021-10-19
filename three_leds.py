@@ -4,20 +4,24 @@ import machine
 import utime
 
 def switch(color, mode):
+    if mode == "on":
+        turn = 1
+    elif mode == "off":
+        turn = 0
     if color == "red":
         pin = 15
     elif color == "yellow":
         pin = 14
-    else:
+    elif color == "green":
         pin = 13
-    machine.Pin(pin, machine.Pin.OUT).value(mode)
+
+    machine.Pin(pin, machine.Pin.OUT).value(turn)
     utime.sleep(2)
 
 while True:
-    switch("red", 1)
-    switch("red", 0)
-    switch("yellow", 1)
-    switch("yellow", 0)
-    switch("green", 1)
-    switch("green", 0)
-    
+    switch("red", "on")
+    switch("red", "off")
+    switch("yellow", "on")
+    switch("yellow", "off")
+    switch("green", "on")
+    switch("green", "off")
