@@ -3,25 +3,21 @@
 import machine
 import utime
 
-led_red = machine.Pin(15, machine.Pin.OUT)
-led_yellow = machine.Pin(14, machine.Pin.OUT)
-led_green = machine.Pin(13, machine.Pin.OUT)
+def switch(color, mode):
+    if color == "red":
+        pin = 15
+    elif color == "yellow":
+        pin = 14
+    else:
+        pin = 13
+    machine.Pin(pin, machine.Pin.OUT).value(mode)
+    utime.sleep(2)
 
 while True:
-    led_red.value(0)
-    led_yellow.value(0)
-    led_green.value(0)
-    utime.sleep(2)
-
-    led_red.value(1)
-    utime.sleep(2)
-    led_red.value(0)
-    
-    led_yellow.value(1)
-    utime.sleep(2)
-    led_yellow.value(0)
-    
-    led_green.value(1)
-    utime.sleep(2)
-    led_green.value(0)
+    switch("red", 1)
+    switch("red", 0)
+    switch("yellow", 1)
+    switch("yellow", 0)
+    switch("green", 1)
+    switch("green", 0)
     
