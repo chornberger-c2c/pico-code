@@ -22,7 +22,6 @@ def switch(color, mode):
     machine.Pin(pins[color], machine.Pin.OUT).value(turn)
     utime.sleep(2)
 
-
 # do the loop sequence
 while True:
     switch("red", "on")
