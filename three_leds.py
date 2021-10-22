@@ -14,6 +14,7 @@ pins = {
     "green": 13,
 }
 
+
 def switch(color, mode):
     """
     switch a led with a certain color on or off
@@ -21,6 +22,7 @@ def switch(color, mode):
     turn = 1 if mode == "on" else 0
     machine.Pin(pins[color], machine.Pin.OUT).value(turn)
     utime.sleep(2)
+
 
 # do the loop sequence
 while True:

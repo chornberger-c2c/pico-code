@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 """
-iterate through all pins on Pi Pico to identify which blinking led has which pin number
+go through all pins on Pi Pico to identify which led corresponds to which pin
 """
 
 import machine
