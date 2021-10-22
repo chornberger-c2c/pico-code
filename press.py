@@ -20,4 +20,3 @@ while True:
         utime.sleep(1)
     led_internal.value(0)
     led_external.value(0)
-
