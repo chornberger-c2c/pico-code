@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+"""
+react to a pressed physical button on Pi Pico
+"""
+
 import machine
 import utime
 

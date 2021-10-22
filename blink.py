@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+"""
+iterate through all pins on Pi Pico to identify which blinking led has which pin number
+"""
+
 import machine
 import utime
 

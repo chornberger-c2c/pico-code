@@ -1,5 +1,9 @@
 #!/usr/bin/python
 
+"""
+light a led when a physical button is pressed
+"""
+
 import machine
 import utime
 
@@ -16,3 +20,4 @@ while True:
         utime.sleep(1)
     led_internal.value(0)
     led_external.value(0)
+
