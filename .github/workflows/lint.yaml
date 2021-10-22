@@ -9,8 +9,21 @@ jobs:
     steps:
       - name: Check out source repository
         uses: actions/checkout@v2 
-      - name: Python Code Quality and Lint
+      - name: pylint
         uses: ricardochaves/python-lint@v1.3.0
         with:
           python-root-list: "*.py"
           extra-pylint-options: "-d E0401"
+          use-pycodestyle: false
+          use-flake8: false
+          use-black: false
+          use-mypy: false
+          use-isort: false
+      - name: pycodestyle
+        uses: ricardochaves/python-lint@v1.3.0
+        with:
+          use-pylint: false
+          use-flake8: false
+          use-black: false
+          use-mypy: false
+          use-isort: false
