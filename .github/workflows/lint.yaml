@@ -1,5 +1,5 @@
 ---
-name: linting
+name: python linting
 on: [push, pull_request]
 
 jobs:
